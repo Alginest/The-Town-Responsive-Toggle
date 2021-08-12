@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: rgb(129, 128, 128);
+  --white-color: white;
+  --blue-car: #34a1eb;
+  --roboto-fnt: 'Roboto', sans-serif;
+}
+body {
+  font-family: var(--roboto-fnt);
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+header {
+  width: 100%;
+  height: 1000px;
+  background: url(./images/the-town-bg-01.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: none;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.nav.active {
+  display: flex;
+  background-color: #dd8874;
+}
+nav .logo-cont {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+nav .logo-cont h1 {
+  position: absolute;
+  left: 280px;
+  top: 25px;
+  color: var(--white-color);
+  font-family: var(--roboto-fnt);
+  font-weight: 700;
+  font-size: 28px;
+  transition: all 0.3s;
+}
+/*navbar-links*/
+nav .nav-cont {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*toggle*/
+nav .nav-cont .nav-toggle-items {
+  display: none;
+}
+nav .nav-cont .nav-toggle {
+  display: block;
+  font-size: 30px;
+  color: var(--white-color);
+  transition: all 0.5s;
+}
+nav .nav-cont .nav-toggle.active {
+  display: block;
+  font-size: 30px;
+  color: var(--white-color);
+  transform: rotate(90deg);
+}
+/*toggled div*/
+header .nav-toggled-div {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 150px;
+  height: 178px;
+  background-color: var(--white-color);
+  text-align: center;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.5s ease-in;
+  z-index: 10;
+}
+header .nav-toggled-div.active {
+  display: flex;
+}
+header .nav-toggled-div li {
+  padding: 20px;
+}
+header .nav-toggled-div li a {
+  color: var(--blue-car);
+}
+header .nav-toggled-div li:hover {
+  background-color: whitesmoke;
+}
+/*before toggle*/
+nav .nav-cont li {
+  width: 180px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+}
+nav .nav-cont li a {
+  font-family: var(--roboto-fnt);
+  font-size: 25px;
+  letter-spacing: 1.1px;
+  font-weight: 400;
+  color: var(--white-color);
+  transition: all 0.3s;
+}
+/*nav-hover*/
+nav .nav-cont li a:hover {
+  color: var(--blue-car);
+  transform: scale(1.1);
+}
+nav .logo-cont h1:hover {
+  color: var(--blue-car);
+  transform: scale(1.1);
+}
+
+/*hero-text*/
+header .head-text-mid {
+  position: absolute;
+  top: 400px;
+  left: 43%;
+}
+header .head-text-mid h1 {
+  text-align: center;
+  color: var(--white-color);
+  font-size: 70px;
+  font-weight: 500;
+  text-shadow: 2px 2px 3px black;
+}
+header .head-text-mid p {
+  color: var(--white-color);
+  text-align: center;
+  margin: 15px 0;
+  font-size: 24px;
+}
+/*header-btn*/
+header .head-btn-cont {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  bottom: 100px;
+  left: 47.5%;
+  background-color: #e99a7b;
+  border-radius: 100px;
+  transition: all 0.2s;
+}
+header .head-btn-cont a {
+  transition: all 0.2s;
+  color: white;
+  font-size: 100px;
+}
+/*btn-hover*/
+header .head-btn-cont:hover {
+  background-color: var(--white-color);
+  transform: scale(1.1);
+}
+header .head-btn-cont a:hover {
+  color: var(--blue-car);
+}
+/****************************************************************************** **************************Introduction***********************************/
+/*img-container*/
+.intruduction {
+  width: 100%;
+  height: auto;
+  margin: 100px 0;
+}
+.intruduction .intro-wrapper {
+  width: 80%;
+  height: auto;
+  margin: 0 10%;
+}
+.intruduction .intro-main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-bottom: 100px;
+}
+.intruduction .intro-main .intro-img {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+}
+.intruduction .intro-main .intro-img img {
+  height: 450px;
+  margin-top: 20px;
+}
+/*img*/
+.intruduction .intro-main .intro-info {
+  margin-top: 25px;
+  width: 500px;
+  height: 100%;
+  margin-left: 20px;
+}
+.intruduction .intro-main .intro-info h1 {
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--blue-car);
+}
+.intruduction .intro-main .intro-info p {
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  margin: 40px 10px;
+  color: var(--primary-color);
+  font-weight: 400;
+}
+
+.intruduction .intro-main .intro-info a {
+  display: block;
+  margin-top: 50px;
+  margin-left: 30px;
+  padding: 20px;
+  width: 200px;
+  height: 70px;
+  background-color: var(--blue-car);
+  text-align: center;
+  border-radius: 30px;
+  color: var(--white-color);
+  font-size: 24px;
+}
+/*****************Introduction- offering ******************************/
+.intruduction .intro-place {
+  width: 100%;
+  height: auto;
+  margin: 100px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.intruduction .intro-place .intro-trio {
+  width: 400px;
+  height: auto;
+  margin: 20px 20px;
+}
+.intruduction .intro-place .intro-trio .intro-icon {
+  display: inline-block;
+  width: 100%;
+  font-size: 100px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--blue-car);
+}
+.intruduction .intro-place .intro-trio h2 {
+  margin: 20px 0;
+  color: var(--blue-car);
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+}
+.intruduction .intro-place .intro-trio p {
+  line-height: 30px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+/********************************************************************************Responsive first 2 parts***************************************************/
+
+@media (max-width: 1550px) {
+  .intruduction {
+    height: auto;
+  }
+  .intruduction .intro-main {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .intruduction .intro-place {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header .head-text-mid {
+    top: 400px;
+    left: 38%;
+  }
+}
+@media (max-width: 978px) {
+  nav .logo-cont h1 {
+    left: 150px;
+    top: 25px;
+    font-weight: 700;
+    font-size: 28px;
+  }
+  nav .nav-cont li {
+    width: 180px;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    margin: 0 5px;
+  }
+  nav .nav-cont .nav-toggle-items {
+    display: block;
+  }
+}
